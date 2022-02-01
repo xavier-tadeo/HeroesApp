@@ -6,3 +6,11 @@ export interface IHero {
   first_appearance: string;
   characters: string;
 }
+
+export interface IHeroId {
+  heroId: string;
+}
+
+export interface IHeroes {
+  heroes: [IHero];
+}
