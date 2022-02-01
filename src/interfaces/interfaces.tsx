@@ -10,3 +10,7 @@ export interface IHero {
 export interface IHeroId {
   heroId: string;
 }
+
+export interface IHeroes {
+  heroes: [IHero];
+}
