@@ -41,7 +41,6 @@ describe("Given a Login component", () => {
           email: "tadeo@tadeo.es",
         },
       };
-      localStorage.setItem("lastPath", "/dc");
 
       render(
         <AuthContext.Provider value={contextValue}>
@@ -52,6 +51,11 @@ describe("Given a Login component", () => {
       );
 
       const button = screen.getByRole("button");
+      fireEvent.click(button);
+
+      expect(mockNavigate).toHaveBeenCalledWith("/", { replace: true });
+
+      localStorage.setItem("lastPath", "/dc");
       fireEvent.click(button);
 
       expect(contextValue.dispatch).toHaveBeenCalledWith(action);
