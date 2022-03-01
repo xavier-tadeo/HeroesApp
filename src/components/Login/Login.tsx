@@ -20,9 +20,9 @@ export const Login = () => {
     dispatch(action);
 
     const lastPath = localStorage.getItem("lastPath") || "/";
-    const lastSearch = localStorage.getItem("lastSearch" || "");
+    // const lastSearch = localStorage.getItem("lastSearch" || "");
 
-    navigate(lastPath + lastSearch, {
+    navigate(lastPath, {
       replace: true,
     });
   };
