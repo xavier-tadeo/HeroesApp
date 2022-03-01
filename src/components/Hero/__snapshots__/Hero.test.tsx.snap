@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given Hero component When it renderer The should show hero whe it have a hero 1`] = `
+<div
+  className="row mt-5"
+>
+  <div
+    className="col-4"
+  >
+    <img
+      alt="Spider Man"
+      className="img-thumbnail"
+      src="/assets/marvel-spider.jpg"
+    />
+  </div>
+  <div
+    className="col-8"
+  >
+    <h3>
+      Spider Man
+    </h3>
+    <ul
+      className="list-group"
+    >
+      <li
+        className="list-group-item"
+      >
+        <b>
+          Alter ego:
+        </b>
+        Peter Parker
+      </li>
+      <li
+        className="list-group-item"
+      >
+        <b>
+          Publisher:
+        </b>
+        Marvel Comics
+      </li>
+      <li
+        className="list-group-item"
+      >
+        <b>
+          First Appearance:
+        </b>
+        Amazing Fantasy #15
+      </li>
+    </ul>
+    <h5>
+      Characters
+    </h5>
+    <p>
+      Peter Parker
+    </p>
+    <button
+      className="btn btn-outline-info"
+      onClick={[Function]}
+    >
+      Return
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Given Hero component When it renderer Then should show anything when don't have a hero 1`] = `null`;
