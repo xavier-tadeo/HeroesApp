@@ -81,4 +81,22 @@ describe("Given Hero component", () => {
       expect(mockNavigate).toHaveBeenCalledWith(-1);
     });
   });
+  describe("When no existing hero", () => {
+    test("Then should return h1 with messege 'Don't have a hero'", () => {
+      render(
+        <AuthContext.Provider value={contextValue}>
+          <MemoryRouter initialEntries={["/hero/marvel-spider98989898"]}>
+            <Routes>
+              <Route path="/hero/:heroId" element={<Hero />} />
+              <Route path="/" element={<h1>Don't have a Hero</h1>} />
+            </Routes>
+          </MemoryRouter>
+        </AuthContext.Provider>
+      );
+
+      const h1Expect = screen.getByText("Don't have a Hero");
+
+      expect(h1Expect).toBeInTheDocument();
+    });
+  });
 });
